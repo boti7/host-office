@@ -4,6 +4,7 @@
 
     <div class="partners">
       <div v-for="partner in partners" :key="partner.name" class="partner-card">
+        <img class="logo" src="../static/placeholder.com-logo1.png" />
         <div class="name">{{ partner.name }}</div>
       </div>
     </div>
@@ -40,7 +41,7 @@
 
     .partner-card {
       width: 200px;
-      height: 200px;
+      padding: 20px;
       text-align: center;
       cursor: pointer;
       opacity: 0.6;
@@ -48,6 +49,10 @@
     }
     .partner-card:hover {
       opacity: 1;
+    }
+
+    .logo {
+      width: 100%;
     }
   }
 </style>
