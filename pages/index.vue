@@ -11,6 +11,8 @@
     <SectionPartners />
 
     <SectionContact />
+
+    <Footer />
   </div>
 </template>
 
@@ -21,6 +23,7 @@ import SectionAboutUs from '~/components/SectionAboutUs.vue';
 import SectionDomains from '~/components/SectionDomains.vue';
 import SectionPartners from '~/components/SectionPartners.vue';
 import SectionContact from '~/components/SectionContact.vue';
+import Footer from '~/components/Footer.vue';
 
 export default {
   components: {
@@ -29,7 +32,8 @@ export default {
     SectionAboutUs,
     SectionDomains,
     SectionPartners,
-    SectionContact
+    SectionContact,
+    Footer
   }
 }
 </script>
