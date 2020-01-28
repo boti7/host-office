@@ -9,6 +9,8 @@
     <SectionDomains />
 
     <SectionPartners />
+
+    <SectionContact />
   </div>
 </template>
 
@@ -18,6 +20,7 @@ import Hero from '~/components/Hero.vue';
 import SectionAboutUs from '~/components/SectionAboutUs.vue';
 import SectionDomains from '~/components/SectionDomains.vue';
 import SectionPartners from '~/components/SectionPartners.vue';
+import SectionContact from '~/components/SectionContact.vue';
 
 export default {
   components: {
@@ -25,7 +28,8 @@ export default {
     Hero,
     SectionAboutUs,
     SectionDomains,
-    SectionPartners
+    SectionPartners,
+    SectionContact
   }
 }
 </script>
