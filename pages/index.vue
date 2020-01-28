@@ -7,6 +7,8 @@
     <SectionAboutUs />
 
     <SectionDomains />
+
+    <SectionPartners />
   </div>
 </template>
 
@@ -14,14 +16,16 @@
 import Navbar from '~/components/Navbar.vue';
 import Hero from '~/components/Hero.vue';
 import SectionAboutUs from '~/components/SectionAboutUs.vue';
-import SectionDomains from '~/components/SectionDomains';
+import SectionDomains from '~/components/SectionDomains.vue';
+import SectionPartners from '~/components/SectionPartners.vue';
 
 export default {
   components: {
     Navbar,
     Hero,
     SectionAboutUs,
-    SectionDomains
+    SectionDomains,
+    SectionPartners
   }
 }
 </script>
