@@ -1,0 +1,17 @@
+{
+  "name": "host-office",
+  "version": "1.0.0",
+  "description": "Domain registrar website",
+  "author": "Botond Horvath",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
