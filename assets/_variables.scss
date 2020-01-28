@@ -1,5 +1,6 @@
-$bg-color-light: #F7F8FB;
+$color-light: #F7F8FB;
+$bg-color-light: $color-light;
 $title-color: #39424E;
 $text-color: #637381;
-$hero-bg-color: #4D84C7;
-$hero-title-color: #F7F8FB;
+$text-color-light: $color-light;
+$text-color-dark: #040515;

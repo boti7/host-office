@@ -17,6 +17,8 @@
 <style lang="scss" scoped>
   @import '@/assets/_variables.scss';
 
+  $hero-bg-color: #4D84C7;
+
   .hero-wrapper {
     width: 100%;
     height: calc(100vh - 70px);
@@ -34,7 +36,7 @@
   .title {
     font-weight: 300;
     font-size: 40px;
-    color: $hero-title-color;
+    color: $text-color-light;
   }
 
   .search-box {

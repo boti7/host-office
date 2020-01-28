@@ -18,7 +18,9 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '@/assets/_variables.scss';
+
   nav {
     width: 100%;
     display: flex;
@@ -29,7 +31,7 @@
   .brand a {
     display: block;
     padding: 20px 10px;
-    color: #39424E;
+    color: $title-color;
     font-size: 24px;
     text-decoration: none;
   }

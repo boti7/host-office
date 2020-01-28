@@ -19,11 +19,13 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  @import '@/assets/_variables.scss';
+
   a {
     display: block;
     padding: 20px 10px;
-    color: #39424E;
+    color: $title-color;
     font-size: 18px;
     text-decoration: none;
   }
