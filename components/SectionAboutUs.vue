@@ -12,15 +12,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '@/assets/_variables.scss';
 
-  .section {
-    padding: 40px 0;
-  }
-  h2 {
-    font-weight: 300;
-    font-size: 40px;
-    color: $title-color;
-    text-align: center;
-  }
 </style>

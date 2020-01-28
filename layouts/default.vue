@@ -4,7 +4,7 @@
 
 <style lang="scss">
   @import '@/assets/_variables.scss';
-  
+
   html {
     font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
@@ -25,9 +25,20 @@
     margin: 0;
   }
 
+  h2 {
+    font-weight: 300;
+    font-size: 40px;
+    color: $title-color;
+    text-align: center;
+  }
+
   .container {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
+  }
+
+  .section {
+    padding: 80px 0;
   }
 </style>
