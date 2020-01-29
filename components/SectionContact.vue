@@ -1,5 +1,5 @@
 <template>
-  <div class="section-wrapper">
+  <div id="kapcsolat" class="section-wrapper">
     <div class="container section">
       <h2>Kapcsolat</h2>
 

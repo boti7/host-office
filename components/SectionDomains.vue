@@ -1,5 +1,5 @@
 <template>
-  <div class="section-wrapper">
+  <div id="domain" class="section-wrapper">
     <div class="container section">
       <h2>Megvásárolható domainek</h2>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="container section">
+  <div id="partnerek" class="container section">
     <h2>Partnereink</h2>
 
     <div class="partners">

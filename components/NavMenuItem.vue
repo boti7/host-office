@@ -1,6 +1,8 @@
 <template>
   <div class="menu-item">
-    <a :href="href" @click="$emit('click', href)">{{ label }}</a>
+    <a :href="href" @click="$emit('click', href)">
+      <slot></slot>
+    </a>
   </div>
 </template>
 
@@ -11,9 +13,6 @@
       href: {
         type: String,
         default: '#'
-      },
-      label: {
-        type: String
       }
     }
   }
@@ -24,8 +23,9 @@
 
   a {
     display: block;
+    margin: 0 5px;
     padding: 20px 10px;
-    color: $title-color;
+    color: inherit;
     font-size: 18px;
     text-decoration: none;
   }
