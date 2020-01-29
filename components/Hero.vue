@@ -21,11 +21,13 @@
 
   .hero-wrapper {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 240px);
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $hero-bg-color;
+    background-image: url('../static/taylor-vick-M5tzZtFCOfs-unsplash.jpg');
+    background-size: cover;
   }
 
   .hero-content {
@@ -34,9 +36,10 @@
   }
 
   .title {
-    font-weight: 300;
+    font-weight: bold;
     font-size: 40px;
     color: $text-color-light;
+    text-shadow: 0 0 6px #000;
   }
 
   .search-box {
