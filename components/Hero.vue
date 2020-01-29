@@ -3,14 +3,17 @@
     <div class="hero-content">
       <h1 class="title">Domain regisztrációs szolgáltatások</h1>
 
-      <div class="search-box"></div>
+      <DomainSearch />
     </div>
   </div>
 </template>
 
 <script>
+  import DomainSearch from './DomainSearch';
+
   export default {
-    name: 'Hero'
+    name: 'Hero',
+    components: { DomainSearch }
   }
 </script>
 
@@ -31,6 +34,7 @@
   }
 
   .hero-content {
+    width: 100%;
     max-width: 1024px;
     text-align: center;
   }
@@ -40,14 +44,5 @@
     font-size: 40px;
     color: $text-color-light;
     text-shadow: 0 0 6px #000;
-  }
-
-  .search-box {
-    width: calc(100% - 40px);
-    max-width: 700px;
-    min-height: 60px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: $bg-color-light;
   }
 </style>
