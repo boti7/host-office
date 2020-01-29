@@ -37,6 +37,7 @@
     width: 100%;
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 
     .partner-card {

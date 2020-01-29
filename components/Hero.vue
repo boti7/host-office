@@ -41,8 +41,12 @@
 
   .title {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 32px;
     color: $text-color-light;
     text-shadow: 0 0 6px #000;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 40px;
+    }
   }
 </style>

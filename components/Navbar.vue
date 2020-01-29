@@ -1,15 +1,21 @@
 <template>
-  <div :class="{ 'navbar': true, 'navbar-bg': isBackground }">
+  <div :class="{ 'navbar': true, 'navbar-bg': isBackground || isMenuOpen }">
     <nav class="container">
       <div class="brand">
         <a href="/">Host Office kft.</a>
       </div>
 
-      <div class="menu">
-        <NavMenuItem href="#rolunk">Rólunk</NavMenuItem>
-        <NavMenuItem href="#domain">Domain nevek</NavMenuItem>
-        <NavMenuItem href="#partnerek">Partnerek</NavMenuItem>
-        <NavMenuItem href="#kapcsolat">Kapcsolat</NavMenuItem>
+      <div :class="{ 'menu-toggle': true, 'menu-open': isMenuOpen }" @click="isMenuOpen = !isMenuOpen">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <div :class="{ 'menu': true, 'menu-open': isMenuOpen }">
+        <NavMenuItem href="#rolunk" @click="menuItemClick">Rólunk</NavMenuItem>
+        <NavMenuItem href="#domain" @click="menuItemClick">Domain nevek</NavMenuItem>
+        <NavMenuItem href="#partnerek" @click="menuItemClick">Partnerek</NavMenuItem>
+        <NavMenuItem href="#kapcsolat" @click="menuItemClick">Kapcsolat</NavMenuItem>
       </div>
     </nav>
   </div>
@@ -21,12 +27,16 @@
     name: 'Navbar',
     components: { NavMenuItem },
     data: () => ({
-      isBackground: false
+      isBackground: false,
+      isMenuOpen: false
     }),
     methods: {
       onScroll() {
         const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         this.isBackground = currentScrollPosition > 100;
+      },
+      menuItemClick() {
+        this.isMenuOpen = false;
       }
     },
     mounted() {
@@ -55,11 +65,16 @@
     background-color: $bg-color-light;
     text-shadow: none;
     box-shadow: 0 0 3px #637381;
+
+    .bar1, .bar2, .bar3 {
+      background-color: $title-color !important;
+    }
   }
 
   nav {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -67,13 +82,60 @@
       display: block;
       padding: 20px 10px;
       color: inherit;
-      font-size: 24px;
+      font-size: 20px;
       text-decoration: none;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 24px;
+      }
+    }
+
+    .menu-toggle {
+      padding: 10px;
+      cursor: pointer;
+
+      @media (min-width: $breakpoint-tablet) {
+        display: none;
+      }
+
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: $text-color-light;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+    }
+
+    .menu-toggle.menu-open {
+      .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+        transform: rotate(-45deg) translate(-8px, 7px);
+      }
+
+      .bar2 {opacity: 0;}
+
+      .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
     }
 
     .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+
+      @media (min-width: $breakpoint-tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        width: auto;
+      }
+    }
+
+    .menu.menu-open {
       display: flex;
-      justify-content: right;
     }
   }
 </style>

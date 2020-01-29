@@ -42,13 +42,17 @@
     margin: 20px auto;
 
     input[type="text"] {
-      width: calc(50% - 10px);
+      width: 100%;
       margin: 10px 0;
       padding: 10px;
       border: none;
       border-radius: 4px;
       font-family: inherit;
       font-size: 16px;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: calc(50% - 10px);
+      }
     }
 
     input[type="submit"] {

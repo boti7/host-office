@@ -27,9 +27,13 @@
 
   h2 {
     font-weight: 300;
-    font-size: 40px;
+    font-size: 32px;
     color: $title-color;
     text-align: center;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 40px;
+    }
   }
 
   .container {

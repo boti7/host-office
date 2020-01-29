@@ -24,9 +24,13 @@
   a {
     display: block;
     margin: 0 5px;
-    padding: 20px 10px;
+    padding: 10px;
     color: inherit;
     font-size: 18px;
     text-decoration: none;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding: 20px 10px;
+    }
   }
 </style>

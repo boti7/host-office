@@ -16,21 +16,33 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '@/assets/_variables.scss';
+
   .aboutus {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 20px;
 
     div {
-      width: calc(50% - 20px);
+      width: 100%;
+      margin: 20px;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: calc(60% - 40px);
+      }
     }
 
     .team-photo {
       display: block;
-      width: calc(50% - 20px);
+      width: 100%;
+      margin: 20px;
       border-radius: 10px;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: calc(40% - 40px);
+      }
     }
   }
 </style>
