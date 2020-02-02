@@ -1,6 +1,6 @@
-# host-office
+Single page website with Vue & Nuxt
 
-> Domain registrar website
+[Live demo](https://boti7.github.io/host-office)
 
 ## Build Setup
 
