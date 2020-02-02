@@ -39,9 +39,10 @@
         this.isLoading = true;
         this.isSent = false;
 
-        axios.post('http://hboti.luzsiadam.hu/api.php?action=message', this.formData)
-          .then(() => this.clearForm(true))
-          .catch(() => this.clearForm(false));
+        // axios.post('URL to send the message', this.formData)
+        //   .then(() => this.clearForm(true))
+        //   .catch(() => this.clearForm(false));
+        setTimeout(() => this.clearForm(true), 1000);
       },
       clearForm(isSuccess) {
         this.isSent = true;
