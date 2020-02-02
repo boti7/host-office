@@ -1,6 +1,6 @@
 <template>
   <div id="partnerek" class="container section">
-    <h2>Partnereink</h2>
+    <h2>{{ $t('nav.partners') }}</h2>
 
     <div class="partners">
       <div v-for="partner in partners" :key="partner.name" class="partner-card">

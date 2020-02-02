@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "aboutUs": "Rólunk",
+    "domains": "Domain nevek",
+    "partners": "Partnerek",
+    "contact": "Kapcsolat"
+  },
+  "hero": {
+    "title": "Domain regisztrációs szolgáltatások"
+  },
+  "domainSearch": {
+    "whatDomain": "Milyen domaint szeretnél?",
+    "search": "Keresés",
+    "error": "Hiba történt, próbáld újra később.",
+    "invalidDomain": "A megadott domain név nem megfelelő formátumú.",
+    "available": "{domain} elérhető.",
+    "buyItNow": "Vedd meg most!",
+    "notAvailable": "Sajnos a(z) {domain} már foglalt."
+  },
+  "sectionContact": {
+    "messageSent": "Üzenet elküldve!",
+    "error": "Hiba történt, próbáld újra később.",
+    "name": "Neved",
+    "email": "Email címed",
+    "message": "Üzenet",
+    "send": "Küldés"
+  },
+  "sectionDomains": {
+    "domainsForSale": "Megvásárolható domainek",
+    "buyNow": "Megrendelem",
+    "quote": "Ajánlatot kérek"
+  }
+}

@@ -2,7 +2,7 @@
   <div :class="{ 'navbar': true, 'navbar-bg': isBackground || isMenuOpen }">
     <nav class="container">
       <div class="brand">
-        <a href="/">Host Office kft.</a>
+        <a href="/">Acme Corp.</a>
       </div>
 
       <div :class="{ 'menu-toggle': true, 'menu-open': isMenuOpen }" @click="isMenuOpen = !isMenuOpen">
@@ -12,10 +12,12 @@
       </div>
 
       <div :class="{ 'menu': true, 'menu-open': isMenuOpen }">
-        <NavMenuItem href="#rolunk" @click="menuItemClick">Rólunk</NavMenuItem>
-        <NavMenuItem href="#domain" @click="menuItemClick">Domain nevek</NavMenuItem>
-        <NavMenuItem href="#partnerek" @click="menuItemClick">Partnerek</NavMenuItem>
-        <NavMenuItem href="#kapcsolat" @click="menuItemClick">Kapcsolat</NavMenuItem>
+        <NavMenuItem href="#rolunk" @click="menuItemClick">{{ $t('nav.aboutUs') }}</NavMenuItem>
+        <NavMenuItem href="#domain" @click="menuItemClick">{{ $t('nav.domains') }}</NavMenuItem>
+        <NavMenuItem href="#partnerek" @click="menuItemClick">{{ $t('nav.partners') }}</NavMenuItem>
+        <NavMenuItem href="#kapcsolat" @click="menuItemClick">{{ $t('nav.contact') }}</NavMenuItem>
+        <NavMenuItem v-if="$i18n.locale === 'hu'" @click="changeLang('en', $event)">EN</NavMenuItem>
+        <NavMenuItem v-else @click="changeLang('hu', $event)">HU</NavMenuItem>
       </div>
     </nav>
   </div>
@@ -37,6 +39,10 @@
       },
       menuItemClick() {
         this.isMenuOpen = false;
+      },
+      changeLang(lang, evt) {
+        evt.preventDefault();
+        this.$i18n.locale = lang;
       }
     },
     mounted() {

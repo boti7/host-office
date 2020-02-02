@@ -1,7 +1,7 @@
 <template>
   <div class="hero-wrapper">
     <div class="hero-content">
-      <h1 class="title">Domain regisztrációs szolgáltatások</h1>
+      <h1 class="title">{{ $t('hero.title') }}</h1>
 
       <DomainSearch />
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="menu-item">
-    <a :href="href" @click="$emit('click', href)">
+    <a :href="href" @click="$emit('click', $event)">
       <slot></slot>
     </a>
   </div>

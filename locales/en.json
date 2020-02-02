@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "aboutUs": "About us",
+    "domains": "Domain names",
+    "partners": "Partners",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Domain registration service"
+  },
+  "domainSearch": {
+    "whatDomain": "What domain name do you want?",
+    "search": "Search",
+    "error": "Network error, please try again later.",
+    "invalidDomain": "Invalid domain name format.",
+    "available": "{domain} is available.",
+    "buyItNow": "Buy it now!",
+    "notAvailable": "Unfortunately {domain} is already taken."
+  },
+  "sectionContact": {
+    "messageSent": "Message sent!",
+    "error": "Please try again later.",
+    "name": "Your name",
+    "email": "Your email address",
+    "message": "Message",
+    "send": "Send"
+  },
+  "sectionDomains": {
+    "domainsForSale": "Domains for sale",
+    "buyNow": "Buy now",
+    "quote": "Get a quote"
+  }
+}

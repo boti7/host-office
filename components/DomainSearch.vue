@@ -1,16 +1,19 @@
 <template>
   <div class="search-box">
     <form @submit="onSubmit">
-      <input type="text" class="domain-input" placeholder="Milyen domaint szeretnél?"
+      <input type="text" class="domain-input" :placeholder="$t('domainSearch.whatDomain')"
              v-model="domainSearch" :disabled="isLoading" />
-      <input type="submit" class="domain-search-btn" value="Keresés" :disabled="isLoading" />
+      <input type="submit" class="domain-search-btn" :value="$t('domainSearch.search')" :disabled="isLoading" />
     </form>
 
     <div v-if="showResultPane" class="result-pane">
-      <div v-if="isError">Hiba történt, próbáld újra később.</div>
-      <div v-else-if="isInvalidDomain">A megadott domain név nem megfelelő formátumú.</div>
-      <div v-else-if="isDomainAvailable">{{ domainDisplay }} elérhető.<br><a href="">Vedd meg most!</a></div>
-      <div v-else>Sajnos a(z) {{ domainDisplay }} már foglalt.</div>
+      <div v-if="isError">{{ $t('domainSearch.error') }}</div>
+      <div v-else-if="isInvalidDomain">{{ $t('domainSearch.invalidDomain') }}</div>
+      <div v-else-if="isDomainAvailable">{{ $t('domainSearch.available', { domain: domainDisplay }) }}
+        <br>
+        <a href="">{{ $t('domainSearch.buyItNow') }}</a>
+      </div>
+      <div v-else>{{ $t('domainSearch.notAvailable', { domain: domainDisplay }) }}</div>
     </div>
   </div>
 </template>

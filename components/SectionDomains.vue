@@ -1,15 +1,15 @@
 <template>
   <div id="domain" class="section-wrapper">
     <div class="container section">
-      <h2>Megvásárolható domainek</h2>
+      <h2>{{ $t('sectionDomains.domainsForSale') }}</h2>
 
       <div class="domains-box">
         <div v-for="domain in domains" :key="domain.name" class="domain-item">
           <div class="domain-name">{{ domain.name }}</div>
           <div v-if="domain.price">{{ domain.price }}</div>
           <div class="domain-action">
-            <a v-if="domain.price" href="">Megrendelem</a>
-            <a v-else href="">Ajánlatot kérek</a>
+            <a v-if="domain.price" href="">{{ $t('sectionDomains.buyNow') }}</a>
+            <a v-else href="">{{ $t('sectionDomains.quote') }}</a>
           </div>
         </div>
       </div>

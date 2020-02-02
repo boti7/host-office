@@ -1,16 +1,16 @@
 <template>
   <div id="kapcsolat" class="section-wrapper">
     <div class="container section">
-      <h2>Kapcsolat</h2>
+      <h2>{{ $t('nav.contact') }}</h2>
 
       <form @submit="onSubmit">
-        <div v-if="isSent && isSuccess" class="msg msg-success">Üzenet elküldve!</div>
-        <div v-else-if="isSent" class="msg msg-error">Hiba történt, próbáld újra később.</div>
+        <div v-if="isSent && isSuccess" class="msg msg-success">{{ $t('sectionContact.messageSent') }}</div>
+        <div v-else-if="isSent" class="msg msg-error">{{ $t('sectionContact.error') }}</div>
 
-        <input type="text" placeholder="Neved" v-model="formData.name" :disabled="isLoading" />
-        <input type="text" placeholder="Email címed" v-model="formData.email" :disabled="isLoading" />
-        <textarea rows="7" placeholder="Üzenet" v-model="formData.message" :disabled="isLoading"></textarea>
-        <input type="submit" value="Küldés" :disabled="!isValid || isLoading" />
+        <input type="text" :placeholder="$t('sectionContact.name')" v-model="formData.name" :disabled="isLoading" />
+        <input type="text" :placeholder="$t('sectionContact.email')" v-model="formData.email" :disabled="isLoading" />
+        <textarea rows="7" :placeholder="$t('sectionContact.message')" v-model="formData.message" :disabled="isLoading"></textarea>
+        <input type="submit" :value="$t('sectionContact.send')" :disabled="!isValid || isLoading" />
       </form>
     </div>
   </div>
